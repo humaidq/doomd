@@ -44,11 +44,8 @@
 
 (setq org-roam-directory (file-truename (concat org-directory "roam/")))
 
-(setq org-agenda-files (list "~/wiki/agenda.org"))
+(setq org-agenda-files (list "~/docs/org/todo.org"))
 
-;; Restore 's' behaviour from vim, and other sensible stuff
-(remove-hook 'doom-first-input-hook #'evil-snipe-mode)
-;(setq! evil-want-Y-yank-to-eol nil)
 
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
@@ -84,3 +81,8 @@
 ;; they are implemented.
 (after! evil
   (define-key evil-visual-state-map "s" 'evil-surround-delete))
+
+;; Restore 's' behaviour from vim, and other sensible stuff
+(remove-hook 'doom-first-input-hook #'evil-snipe-mode)
+
+;;(setq! evil-want-Y-yank-to-eol nil)
