@@ -48,3 +48,16 @@
 ;; (unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
+(unpin! org-roam)
+(package! org-roam-ui)
+;; (package! astro-ts-mode)
+(package! copilot
+  :recipe (:host github :repo "copilot-emacs/copilot.el" :files ("*.el")))
+
+;; mcp for gptel
+(package! mcp
+  :recipe (:host github :repo "lizqwerscott/mcp.el" :files ("*.el")))
+
+(package! aidermacs)
+
+(package! typst-ts-mode :recipe (:host nil :repo "https://git.sr.ht/~meow_king/typst-ts-mode"))
