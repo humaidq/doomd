@@ -48,8 +48,19 @@
 ;; (unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
-(unpin! org-roam)
+(unpin! org org-roam)
+(unpin! org org-roam)
+(package! org
+  :recipe (:host github :repo "emacs-straight/org-mode"
+           :branch "feature/all-tex-fonts"))
 (package! org-roam-ui)
+(package! org-modern)
+(package! citar)
+(package! citar-embark)        ; optional
+(package! citar-org-roam)      ; for tight org-roam integration
+(package! citeproc)            ; CSL processor for org-cite HTML/ODT/etc.
+                                        ;
+                                        ;
 ;; (package! astro-ts-mode)
 (package! copilot
   :recipe (:host github :repo "copilot-emacs/copilot.el" :files ("*.el")))
@@ -61,3 +72,5 @@
 (package! aidermacs)
 
 (package! typst-ts-mode :recipe (:host nil :repo "https://git.sr.ht/~meow_king/typst-ts-mode"))
+
+(package! xenops)

@@ -1,4 +1,5 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
+(setq shell-file-name (executable-find "bash"))
 
 ;;(setq doom-font (font-spec :family "Spleen" :size 24))
 ;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
@@ -57,7 +58,6 @@
 
 (setq! copilot-indent-offset-warning-disable t)
 
-
 (use-package! copilot
   :hook (prog-mode . copilot-mode)
   :bind (:map copilot-completion-map
@@ -66,41 +66,5 @@
               ("C-TAB" . 'copilot-accept-completion-by-word)
               ("C-<tab>" . 'copilot-accept-completion-by-word)))
 
-;; (after! gptel
-;;  ;; Set copilot as the default llm interface and claude as the talker
-;;  (setq! gptel-model 'claude-3.7-sonnet
-;;         gptel-backend (gptel-make-gh-copilot "Copilot"))
-;;  (setq! gptel-default-mode 'org-mode))
-
-
-;; TODO monitor this for when it is released on melpa or similar
-;;(use-package! mcp
-;;  :config
-;;  (require 'mcp-hub)
-;;  (require 'gptel-integrations)
-;;  (setq! mcp-hub-servers
-;;         `(("nixos" :command "mcp-nixos")
-;;           ("github" :command "github-mcp-server" :args ("stdio") :env (:GITHUB_PERSONAL_ACCESS_TOKEN ,(user/api-key-from-auth-source "api.github.com" "humaid^mcp")))
-;;           ("filesystem" . (:command "npx" :args ("-y" "@modelcontextprotocol/server-filesystem" "~/projects")))
-;;           ("sequential" . (:command "npx" :args ("-y" "@modelcontextprotocol/server-sequential-thinking")))
-;;           ("context7" . (:command "npx" :args ("-y" "@upstash/context7-mcp"))))))
-
-;; (use-package! aidermacs
-;;   :commands aidermacs-transient-menu
-;;   :init
-;;   (setenv "OPENAI_API_KEY" (user/api-key-from-auth-source "github.com" "humaidq"))
-;;   (setenv "OPENAI_API_BASE" "https://api.githubcopilot.com")
-;;   ;;(require 'vterm nil t)
-;;   :config
-;;   ;; Use vterm backend (default is comint)
-;;   (setq! aidermacs-backend 'vterm
-;;          ;; Enable file watching only works with vterm
-;;          setq aidermacs-watch-files t
-;;          ;; TODO see https://aider.chat/2024/09/26/architect.html
-;;          ;; Optional: Set specific model for architect reasoning
-;;          setq aidermacs-architect-model  "openai/claude-3.5-sonnet"
-;;          ;; Optional: Set specific model for code generation
-;;          setq aidermacs-editor-model  "openai/claude-3.5-sonnet")
-;;   :custom
-;;   (aidermacs-use-architect-mode t)
-;;   (aidermacs-default-model "openai/claude-3.5-sonnet"))
+(setq org-cite-global-bibliography '("~/Zotero/My Library.bib"))
+(setq citar-bibliography org-cite-global-bibliography)
