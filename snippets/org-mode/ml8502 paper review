@@ -1,0 +1,64 @@
+# -*- mode: snippet -*-
+# name: ML8502 Paper Review
+# key: ml8502-paper-review
+# --
+:heading:
+#+OPTIONS: toc:nil
+#+OPTIONS: title:nil
+#+OPTIONS: num:nil
+#+LATEX_HEADER: \usepackage[protrusion=true,expansion=true]{microtype}
+#+LATEX_HEADER: \usepackage{tgbonum}
+#+LATEX_HEADER: \usepackage[margin=0.7in]{geometry}
+#+LATEX_HEADER: \setlength\parindent{0pt}
+#+LATEX_HEADER: \usepackage[dvipsnames]{xcolor}
+#+LATEX_HEADER: \usepackage{hyperref}
+#+LATEX_HEADER: \hypersetup{colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=RoyalBlue}
+
+\begin{center}
+\LARGE ML8502: Paper Review \\
+
+\normalsize
+Humaid Alqasimi (25011208) <\texttt{humaid.alqasimi@mbzuai.ac.ae}>
+
+\vspace{2em}
+\Large \textbf{Paper Title:} \\
+${1:}
+
+\end{center}
+:end:
+
+* Notes :noexport:
+Notes here... Don't forget to link this file to biblio (=SPC n z a=)
+
+* Ratings (1-5)
+
+- *Clarity of Writing:* /5
+- *Technical Quality and Soundness:* /5
+- *Overall Rating:* /5
+- *Originality and Novelty:* /5
+
+* Significance and Impact of the Work
+
+
+* Summary of the Paper
+
+
+* Strengths of the Paper
+
+
+* Weaknesses of the Paper
+
+
+* Questions/Comments for the Authors
+
+
+* Recommendation
+
+# Accept
+# Minor Revisions
+# Major Revisions
+# Reject
+
+Accept
+
+#+print_bibliography:

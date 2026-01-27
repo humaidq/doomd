@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: lecture notes setup
+# key: setup-ln
+# --
+#+setupfile: setup-ln.org

@@ -1,0 +1,32 @@
+# -*- mode: snippet -*-
+# name: cs8201-paper-assignment
+# key: trigger-key
+# condition: t
+# --
+:heading:
+#+OPTIONS: toc:nil
+#+OPTIONS: title:nil
+#+OPTIONS: num:nil
+:end:
+#+TYPST: #align(center)[#text(size: 1.8em)[CS8201: Reading Assignment]]
+#+TYPST: #align(center)[#text(size: 1em)[Humaid Alqasimi (25011208) <`humaid.alqasimi@mbzuai.ac.ae`>]]
+#+TYPST: #v(1.2em)
+#+TYPST: #align(center)[#text(size: 1.4em)[#strong[Paper Title:]]]
+#+TYPST: #align(center)[#text(size: 1.2em)[TITLE HERE]]
+
+* Comments :noexport:
+
+
+* Summary
+
+
+* Pros
+
+
+* Cons
+
+
+* Extensions
+
+
+* Projects
