@@ -48,26 +48,16 @@
 ;; (unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
-(unpin! org org-roam)
 (package! org-roam-ui)
-(package! org-modern)
-(package! citar)
-(package! citar-embark)        ; optional
-(package! citar-org-roam)      ; for tight org-roam integration
-(package! citeproc)            ; CSL processor for org-cite HTML/ODT/etc.
-                                        ;
-                                        ;
-(package! copilot
-  :recipe (:host github :repo "copilot-emacs/copilot.el" :files ("*.el")))
 
-;; mcp for gptel
-(package! mcp
-  :recipe (:host github :repo "lizqwerscott/mcp.el" :files ("*.el")))
+;; :tools llm pins gptel to a commit predating the gpt-5.6 series, so the
+;; ChatGPT-subscription backend doesn't offer gpt-5.6-sol yet.  Drop this once
+;; Doom's own pin moves past it.
+(package! gptel :pin "ac4e1fe736f37cf6d3927cd3ebc26f54d383425a")
 
-(package! aidermacs)
+;; citar, citar-embark, citar-org-roam and citeproc all come from :tools biblio.
 
-(package! typst-ts-mode :recipe (:host nil :repo "https://git.sr.ht/~meow_king/typst-ts-mode"))
+(package! typst-ts-mode :recipe (:host nil :repo "https://codeberg.org/meow_king/typst-ts-mode"))
 
-(package! xenops)
 (package! ox-typst
   :recipe (:host github :repo "jmpunkt/ox-typst"))
